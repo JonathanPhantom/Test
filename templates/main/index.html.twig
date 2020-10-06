@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'S\'inscrire'%}
+
+{% block body %}
+    <h2>Je suis :</h2>
+    <button onclick="document.getElementById('register').submit();">Un candidat</button>
+    <button onclick="document.getElementById('register2').submit();">Une entreprise</button>
+
+    <form id="register" method="POST" action="{{ path('app_register',{type:1}) }}">
+    </form>
+
+    <form id="register2" method="POST" action="{{ path('app_register',{type:2}) }}">
+    </form>
+
+    <a href="{{ path('app_login') }}">Se connecter</a>
+{% endblock %}
