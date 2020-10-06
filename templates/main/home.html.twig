@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Je suis connecté en tant que   {{ app.user.nom}}</h1>
+
+    {% if user.nomEntreprise is defined %}
+        <h4>Je suis dans l'entreprise {{ user.nomEntreprise }}</h4>
+    {% endif %}
+<a href="{{ path('app_logout') }}">Se déconnecter </a>
+{% endblock %}
